@@ -1,0 +1,6 @@
+{
+  "name": "FitTrack",
+  "description": "A premium fitness tracker and wellness dashboard for monitoring workouts, nutrition, hydration, and body metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

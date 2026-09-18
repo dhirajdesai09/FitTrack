@@ -201,7 +201,7 @@ export default function EatTab() {
                         ? 'border-[#44e2cd] bg-[#44e2cd]/20' 
                         : 'border-white/20 hover:border-[#44e2cd]/50'
                     }`}
-                    title={`Glass level: ${step}ml`}
+                    title={`Glass level: ${(step / 1000).toFixed(2)} L`}
                   >
                     {isFilled && <div className="w-full h-full bg-[#44e2cd] opacity-60"></div>}
                   </button>
@@ -210,15 +210,15 @@ export default function EatTab() {
             </div>
 
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-3xl font-extrabold text-[#e4e1ee]">{hydration.toLocaleString()}</span>
-              <span className="text-xs font-semibold text-[#c7c4d8]">ml</span>
+              <span className="text-3xl font-extrabold text-[#e4e1ee]">{(hydration / 1000).toFixed(2)}</span>
+              <span className="text-xs font-semibold text-[#c7c4d8]">L</span>
             </div>
 
             <button 
               onClick={() => addWater(250)}
               className="w-full py-3 bg-[#44e2cd] text-[#003731] font-bold text-xs rounded-2xl active:scale-95 transition-all shadow-[0_4px_20px_rgba(3,198,178,0.3)] hover:opacity-95"
             >
-              + Add 250ml Glass
+              + Add 0.25 L Glass
             </button>
           </div>
 

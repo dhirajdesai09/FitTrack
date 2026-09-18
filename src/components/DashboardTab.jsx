@@ -133,21 +133,21 @@ export default function DashboardTab({ setActiveTab }) {
           </div>
           <div className="flex flex-col items-center justify-center py-2">
             <p className="text-2xl font-bold text-[#e4e1ee] mb-1">
-              {hydration.toLocaleString()} <span className="text-sm font-normal text-[#c7c4d8]">ml</span>
+              {(hydration / 1000).toFixed(2)} <span className="text-sm font-normal text-[#c7c4d8]">L</span>
             </p>
-            <p className="text-[10px] uppercase font-bold text-[#c7c4d8] opacity-60 mb-4">Goal: {hydrationGoal} ml</p>
+            <p className="text-[10px] uppercase font-bold text-[#c7c4d8] opacity-60 mb-4">Goal: {(hydrationGoal / 1000).toFixed(1)} L</p>
             <div className="flex gap-2">
               <button 
                 onClick={(e) => { e.stopPropagation(); addWater(250); }}
                 className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold transition-all border border-white/10 active:scale-95"
               >
-                +250
+                +0.25 L
               </button>
               <button 
                 onClick={(e) => { e.stopPropagation(); addWater(500); }}
                 className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold transition-all border border-white/10 active:scale-95"
               >
-                +500
+                +0.5 L
               </button>
             </div>
           </div>

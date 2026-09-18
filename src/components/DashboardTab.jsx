@@ -141,13 +141,13 @@ export default function DashboardTab({ setActiveTab }) {
                 onClick={(e) => { e.stopPropagation(); addWater(250); }}
                 className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold transition-all border border-white/10 active:scale-95"
               >
-                +0.25 L
+                +0.25 ml
               </button>
               <button 
                 onClick={(e) => { e.stopPropagation(); addWater(500); }}
                 className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold transition-all border border-white/10 active:scale-95"
               >
-                +0.5 L
+                +0.5 ml
               </button>
             </div>
           </div>
